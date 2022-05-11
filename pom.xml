@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>eu.ciechanowiec</groupId>
+  <artifactId>parentpom</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <name>parentpom</name>
+  <description>Parent Pom</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+    <testng.version>7.5</testng.version>
+    <tinylog-api.version>2.5.0-M1.1</tinylog-api.version>
+    <tinylog-impl.version>2.5.0-M1.1</tinylog-impl.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tinylog</groupId>
+      <artifactId>tinylog-api</artifactId>
+      <version>${tinylog-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.tinylog</groupId>
+      <artifactId>tinylog-impl</artifactId>
+      <version>${tinylog-impl.version}</version>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>${testng.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>repsy</id>
+      <name>Repsy Repository</name>
+      <url>https://repo.repsy.io/mvn/ciechanowiec/parentpom</url>
+    </repository>
+  </distributionManagement>
+</project>
