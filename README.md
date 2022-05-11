@@ -89,7 +89,7 @@ Thirdly you need to deploy a parent POM to the Repsy repository. Do it by execut
 `mvn compile deploy`
 
 ## Use Parent POM
-Fourthly you need to configure a child POM in an appropriate way. . You can find an example of a full child POM in this project's root folder (see `childpom.xml` file).
+Fourthly you need to configure a child POM in an appropriate way. You can find an example of a full child POM in this project's root folder (see `childpom.xml` file).
 1. Define in a child POM the parent POM:
 ```xml
 <parent>
