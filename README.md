@@ -16,20 +16,16 @@ Firstly you need to configure your Repsy repository to be able to push there you
 3. Go to https://repsy.io/
 4. Go to the 'Maven' tab.
 5. Create a new Repsy repository by providing a name for it (e.g. _parentpom_) and clicking a plus sign (_Add new repository_)
-6. Configure your `~/.m2/settings.xml` at your home directory according to the example below. By default, the `~/.m2/settings.xml` file doesn't exist. In such a case you need to create it. Besides that, don't forget to remove ellipsis (`...`) from the example below and provide your own `username` and `password`:
+6. Configure your `~/.m2/settings.xml` at your home directory according to the example below. By default, the `~/.m2/settings.xml` file doesn't exist. In such a case you need to create it. Besides that, don't forget to remove provide your own `username` and `password`:
 ```xml
 <settings>
-  ...
   <servers>
-    ...
     <server>
       <id>repsy</id>
       <username>ciechanowiec</username>
       <password>PASSWORD</password>
     </server>
-    ...
   </servers>
-  ...
 </settings>
 ```
 
